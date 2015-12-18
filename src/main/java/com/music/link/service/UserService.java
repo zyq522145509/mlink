@@ -1,6 +1,7 @@
 package com.music.link.service;
 
 import com.music.link.entity.User;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -14,7 +15,7 @@ public interface UserService {
     User getUser(Long id);
 
     Page<User> getAll(Pageable pageable);
-
+    @Cacheable(value = "usercache",keyGenerator = "wiselyKeyGenerator")
     List<User> getUserList();
 
     Page<User> getUserAll(Pageable pageable);

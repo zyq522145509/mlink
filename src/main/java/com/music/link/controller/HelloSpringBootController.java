@@ -1,5 +1,6 @@
 package com.music.link.controller;
 
+import com.music.link.entity.Address;
 import com.music.link.entity.User;
 import com.music.link.service.UserService;
 import org.slf4j.Logger;
@@ -30,24 +31,24 @@ public class HelloSpringBootController {
     @ResponseBody
     public String sayHello(Pageable pageable) {
 
+     /*   Page<User> all = userService.getAll(pageable);
+        Page<User> alsl = userService.getAll(pageable);*/
 
-        Page<User> all = userService.getAll(pageable);
-
-        User user = userService.getUser(1L);
+     /*   User user = userService.getUser(1L);
+        User userS = userService.getUser(1L);*/
 
         List<User> userList = userService.getUserList();
+        List<User> userLists = userService.getUserList();
+        List<User> userListss = userService.getUserList();
 
-        Page<User> allList = userService.getUserAll(pageable);
+      /*   Page<User> allList = userService.getUserAll(pageable);
 
-       /* System.out.println(all.getTotalPages());
+       *//* System.out.println(all.getTotalPages());
         System.out.println(user.getId());
         System.out.println(userList.get(0).getId());
-        System.out.println(allList.getTotalPages());*/
+        System.out.println(allList.getTotalPages());*//*
         userService.save();
-        userService.saveUser();
-        logger.debug("debug");
-        logger.info("info");
-        logger.error("info");
+        userService.saveUser();*/
         return "hello SpringBoot! -- userId:";
     }
 

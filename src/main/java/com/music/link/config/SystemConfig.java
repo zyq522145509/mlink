@@ -2,6 +2,7 @@ package com.music.link.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Configuration
-@PropertySource(value = {"classpath:/application.properties"})
+@PropertySources(value = {@PropertySource("classpath:/application.properties")})
 public class SystemConfig {
 }

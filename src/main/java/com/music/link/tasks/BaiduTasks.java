@@ -14,16 +14,16 @@ import org.springframework.stereotype.Component;
 public class BaiduTasks {
     /**
      * 每隔1秒钟做一次
-     */
+     *//*
     @Scheduled(initialDelay = 200, fixedRate = 1 * 1 * 1000)
     public void getBaiduMusic() {
     }
 
-    /**
+    *//**
      * 每天22:02点11:02点做一次
-     */
+     *//*
     @Scheduled(cron = "0 2 22,11 * * ?")
     public void getBaiduPic() {
-    }
+    }*/
 
 }

@@ -5,6 +5,7 @@ import com.music.link.dao.mapper.UserMapper;
 import com.music.link.entity.User;
 import com.music.link.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,6 @@ public class UserServiceImpl implements UserService {
     public User getUser(Long id) {
         return userDao.getOne(id);
     }
-
     @Override
     public Page<User> getAll(Pageable pageable){
         return userDao.findAll(pageable);
@@ -67,5 +67,4 @@ public class UserServiceImpl implements UserService {
         userMapper.save(user);
 
     }
-
 }

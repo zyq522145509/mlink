@@ -40,7 +40,7 @@
 
     <!--maven插件配置-->
     <build>
-        <plugins>
+       <!-- <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -57,7 +57,7 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
+        </plugins>-->
 
         <pluginManagement>
             <plugins>
@@ -249,6 +249,12 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>1.2.2</version>
+        </dependency>
+        <!--spring-boot-starter-redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>${spring.boot.version}</version>
         </dependency>
     </dependencies>
 
